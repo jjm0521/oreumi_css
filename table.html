@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <caption style="color:blue">강의후 활동</caption>
+        <thead>
+            <th>요일</th>
+            <th>잠자기</th>
+            <th>강의자료만들기</th>
+            <th>음악듣기</th>
+        </thead>
+        <tbody>
+            <tr>  <!-- colspan 열합치기 -->
+                <td>월요일</td>
+                <td colspan="2">15</td>
+                <td>0</td>
+                <td>30</td>
+            </tr>
+            <tr>  
+                <td>화요일</td>
+                <td rowspan="3">13</td>
+                <td>0</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>합계</td>
+                <td>28</td>
+                <td>0</td>
+                <td>52</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <!-- table>(thead>th*3)+tbody -->
+    <table>
+        <thead>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+                /* 노멀라이즈 시작 */
+        body, ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;		/* 해당 태그의 list-style을 none으로 하는 것으로 ●을 제거한다 */
+        }
+
+        a {
+        color: inherit;		/* 부모 엘리먼트의 값을 물려받는다 */
+        text-decoration: none;	/* 해당 태그의 text-decoration을 none으로 하는 것으로 밑줄을 제거한다 */
+        }
+        /* 노멀라이즈 끝 */
+
+                /* 2차 이상의 메뉴만 none 값을 주기 */
+        .top-bar__menu-box-1 > ul ul {
+        display: none;
+        }
+
+        /* 보기 편하게 글씨 크기를 키운다 */
+        a {
+        font-size: larger;
+        }
+
+                /* 가운데 정렬 */
+        .con {
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        /* 변수 생성 */
+        :root {
+        --site-width: 1000px;
+        }
+
+        /* 사이트 최소 너비 설정 */
+        .con-min-width {
+        min-width: var(--site-width);
+        }
+
+        /* 실질적으로 메뉴에 사용할 너비 설정 */
+        .top-bar > .con {
+        width: var(--site-width);
+        }
+
+        /* 실질적으로 메뉴에 사용할 너비 설정 */
+        .top-bar__menu-box-1 > ul > li {
+        display: inline-block;
+        }
+
+        /* 문자열 가운데 정렬 */
+        .top-bar__menu-box-1 {
+        text-align: center;
+        margin-top: 100px;
+        }
+
+        /* 모든 메뉴 박스의 배경을 검은색으로 하고 글자를 하얀색으로 꾸며보자 */
+        .top-bar__menu-box-1 ul {
+        background-color: rgb(73, 48, 214);
+        color: white;
+        }
+                /* 모든 메뉴 크기 조절 */
+        .top-bar__menu-box-1 ul > li > a {
+        display: block;
+        font-size: 1rem;
+        padding: 10px 50px;
+        border: 10px solid  rgb(73, 48, 214);
+        }
+
+                /* 모든 메뉴를 마우스 인식 시 배경색을 변경 */
+        .top-bar__menu-box-1 ul > li:hover > a {
+        background-color: #442f9e;
+        }
+
+        /* 2차 메뉴가 보이도록 만들어 보자 */
+        .top-bar__menu-box-1 > ul > li:hover > ul {
+        display: block;
+        }
+       
+                /* 1차 메뉴를 제한 구역으로 설정 */
+        .top-bar__menu-box-1 > ul > li {
+        position: relative;
+        }
+
+        /* 2차 메뉴에 absolute 값을 주기 */
+        .top-bar__menu-box-1 > ul > li > ul {
+        position: absolute;
+        top: 100%;		/* 2차 메뉴를 1차 메뉴의 아래에 위치시킨다 */
+        left: 0;		/* 2차 메뉴를 1차 메뉴의 왼쪽 벽에 붙인다 */
+        width: 100%;		/* 부모의 너비를 그대로 받아온다 */
+        }
+        
+        html {
+        font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+        background-color: #bababa;
+        }
+
+        /* 메뉴 박스의 모서리를 둥글게 해주자 */
+        .top-bar__menu-box-1 > ul {
+        border-radius: 20px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <header class="top-bar con-min-width">
+        <div class="con">
+          <nav class="top-bar__menu-box-1">
+            <ul>
+              <li>
+                <a href="#">menu1</a>
+                <ul>
+                  <li><a href="#">text1</a></li>
+                  <li><a href="#">text2</a></li>
+                  <li><a href="#">text3</a></li>
+                  <li><a href="#">text4</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">menu2</a>
+                <ul>
+                  <li><a href="#">text1</a></li>
+                  <li><a href="#">text2</a></li>
+                  <li><a href="#">text3</a></li>
+                  <li><a href="#">text4</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">menu3</a>
+                <ul>
+                  <li><a href="#">text1</a></li>
+                  <li><a href="#">text2</a></li>
+                  <li><a href="#">text3</a></li>
+                  <li><a href="#">text4</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">menu4</a>
+                <ul>
+                  <li><a href="#">text1</a></li>
+                  <li><a href="#">text2</a></li>
+                  <li><a href="#">text3</a></li>
+                  <li><a href="#">text4</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">menu5</a>
+                <ul>
+                  <li><a href="#">text1</a></li>
+                  <li><a href="#">text2</a></li>
+                  <li><a href="#">text3</a></li>
+                  <li><a href="#">text4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    
+</body>
+</html>
